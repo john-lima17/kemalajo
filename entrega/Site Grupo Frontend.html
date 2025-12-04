@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto do Grupo</title>
+
+    <style>
+        /* PALETA KEMALJO — TONALIDADE PREMIUM */
+        :root {
+            --preto: #0A0A0A;
+            --gelo: #F5F5F5;
+            --areia: #D6C7B0;
+            --dourado: #C5A86A;
+            --grafite: #1F1F1F;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background: var(--gelo);
+            color: var(--grafite);
+            letter-spacing: 0.5px;
+        }
+
+        header {
+            background: var(--preto);
+            color: var(--gelo);
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 32px;
+            font-weight: 600;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 20px;
+            background: var(--grafite);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--gelo);
+            font-size: 18px;
+            padding: 10px 25px;
+            border-radius: 8px;
+            transition: 0.3s ease;
+        }
+
+        nav a:hover {
+            background: var(--areia);
+            color: var(--preto);
+        }
+
+        .section {
+            display: none;
+            padding: 60px 8%;
+        }
+
+        .active {
+            display: block;
+        }
+
+        /* HOME */
+        h1 {
+            font-weight: 600;
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        .grupo-fotos {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .grupo-fotos img {
+            width: 220px;
+            height: 220px;
+            border-radius: 16px;
+            object-fit: cover;
+            border: 3px solid var(--preto);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: 0.3s;
+        }
+
+        .grupo-fotos img:hover {
+            transform: scale(1.03);
+        }
+
+        .descricao-grupo {
+            margin-top: 50px;
+            background: var(--areia);
+            padding: 30px;
+            font-size: 20px;
+            border-radius: 14px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        /* PROJETO */
+        .video-box {
+            width: 100%;
+            max-width: 650px;
+            margin: auto;
+            background: var(--gelo);
+            padding: 20px;
+            border-radius: 14px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .tecnologias {
+            margin-top: 40px;
+            background: var(--areia);
+            padding: 30px;
+            border-radius: 14px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .tecnologias h2 {
+            margin: 0 0 15px 0;
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+<header>Projeto do Grupo</header>
+
+<nav>
+    <a onclick="showSection('home')">Home</a>
+    <a onclick="showSection('projeto')">Projeto</a>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="section active">
+    <h1>Nosso Grupo</h1>
+
+    <div class="grupo-fotos">
+        <img src="img/1.jpg" alt="Membro 1">
+        <img src="img/2.jpg" alt="Membro 2">
+        <img src="img/3.jpg" alt="Membro 3">
+        <img src="img/4.jpg" alt="Membro 4">
+    </div>
+
+    <div class="descricao-grupo">
+        Somos um grupo dedicado ao desenvolvimento de um projeto front-end com foco em estética minimalista, moderna e impactante. Buscamos criar interfaces elegantes, limpas e funcionais — unindo design e propósito.
+    </div>
+</section>
+
+<!-- PROJETO -->
+<section id="projeto" class="section">
+    <h1>Sobre o Projeto</h1>
+
+    <div class="video-box">
+        <video width="100%" controls>
+            <source src="vd/Gravação de Tela 2025-11-25 133433.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="tecnologias">
+        <h2>Tecnologias Utilizadas</h2>
+        <p><b>Java:</b> Linguagem usada para criar softwares e sistemas robustos e seguros.</p>
+        <p><b>JavaScript:</b> Responsável pela interação e dinamismo nas páginas web.</p>
+        <p><b>HTML & CSS:</b> HTML estrutura o site enquanto o CSS garante estilo, estética e identidade visual.</p>
+    </div>
+</section>
+
+<script>
+function showSection(id) {
+    document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+}
+</script>
+
+</body>
+</html>
